@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sibam Deep — Portfolio</title>
+  <meta name="description" content="Personal portfolio / small business website" />
+  <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
+  <style>
+    :root{
+      --accent:#6C5CE7;
+      --bg:#0f1724;
+      --card:#0b1220;
+      --muted:#9ca3af;
+      --glass: rgba(255,255,255,0.04);
+      --radius:16px;
+      --maxw:1100px;
+      color-scheme: dark;
+      color: #e6eef8;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:linear-gradient(180deg,#071022 0%, #07182b 70%);min-height:100vh;display:flex;align-items:center;justify-content:center;padding:40px}
+    .wrap{width:100%;max-width:var(--maxw)}
+    header{display:flex;align-items:center;justify-content:space-between;margin-bottom:28px}
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{width:48px;height:48px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#00c2ff);display:flex;align-items:center;justify-content:center;font-weight:700}
+    nav a{color:var(--muted);text-decoration:none;margin-left:16px}
+    .hero{display:grid;grid-template-columns:1fr 380px;gap:28px;align-items:center;margin-bottom:32px}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);padding:28px;border-radius:var(--radius);box-shadow:0 6px 18px rgba(2,6,23,0.6);}
+    h1{margin:0;font-size:34px}
+    p.lead{color:var(--muted);margin-top:10px;line-height:1.6}
+
+    /* CTA buttons */
+    .cta{margin-top:18px;display:flex;gap:12px}
+    .btn, .ghost{
+      padding:10px 14px;
+      border-radius:12px;
+      cursor:pointer;
+      text-decoration:none;
+      font-weight:500;
+      display:inline-block;
+      transition:all 0.2s ease;
+    }
+    .btn{
+      background:var(--accent);
+      border:0;
+      color:white;
+    }
+    .btn:hover{opacity:0.9}
+
+    .ghost{
+      background:transparent;
+      border:1px solid var(--accent);
+      color:var(--accent);
+    }
+    .ghost:hover{
+      background:var(--accent);
+      color:white;
+    }
+
+    .stats{display:flex;gap:12px;margin-top:20px}
+    .stat{background:var(--glass);padding:10px;border-radius:12px;font-size:14px}
+
+    /* Right column */
+    .profile{display:flex;flex-direction:column;gap:12px;align-items:center}
+    .avatar{width:100%;height:320px;border-radius:12px;background-image:linear-gradient(135deg,#16324a,#0b2540);display:flex;align-items:center;justify-content:center;font-size:18px;color:var(--muted)}
+    .contact{display:flex;gap:12px;margin-top:10px}
+    .small{font-size:13px;color:var(--muted)}
+
+    /* Sections */
+    section{margin-bottom:26px}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .service{padding:18px;border-radius:12px;background:var(--card)}
+    .portfolio-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+    .item{height:140px;border-radius:10px;background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);display:flex;align-items:center;justify-content:center;color:var(--muted)}
+
+    footer{display:flex;justify-content:space-between;align-items:center;padding:12px 0;color:var(--muted)}
+
+    /* Responsive */
+    @media (max-width:900px){
+      .hero{grid-template-columns:1fr;}
+      .profile .avatar{height:220px}
+      .grid, .portfolio-grid{grid-template-columns:repeat(2,1fr)}
+    }
+    @media (max-width:520px){
+      body{padding:18px}
+      .grid,.portfolio-grid{grid-template-columns:1fr}
+      header{flex-direction:column;align-items:flex-start;gap:12px}
+    }
+
+    /* Simple form styles */
+    form input, form textarea{width:100%;padding:10px;border-radius:10px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit}
+    form label{font-size:13px;color:var(--muted);margin-bottom:6px;display:block}
+    form button{margin-top:10px}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="logo">S</div>
+        <div>
+          <div style="font-weight:700">Sibam Deep</div>
+          <div class="small">Designer • Developer • Creator</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#work">Work</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="card">
+          <h1>Hi — I'm <span style="color:var(--accent)">Sibam Deep</span></h1>
+          <p class="lead">I create captivating motion graphics, animations, and visual storytelling for brands, creators, and businesses. Bringing ideas to life with creativity and precision.</p>
+          <div class="cta">
+            <a class="btn" href="#contact">Hire me</a>
+            <a class="ghost" href="#work">See work</a>
+          </div>
+          <div class="stats">
+            <div class="stat"><strong>3+</strong><div class="small">Years experience</div></div>
+            <div class="stat"><strong>50+</strong><div class="small">Projects</div></div>
+            <div class="stat"><strong>10</strong><div class="small">Trusted clients</div></div>
+          </div>
+        </div>
+
+        <aside class="profile card">
+          <div class="avatar">Upload a photo or replace this block</div>
+          <div style="width:100%">
+            <div style="display:flex;justify-content:space-between;align-items:center">
+              <div>
+                <div style="font-weight:700">Let's talk</div>
+                <div class="small">Open to interesting projects</div>
+              </div>
+              <div style="text-align:right">
+                <div class="small">Location</div>
+                <div style="font-weight:700">Assam,Dhubri</div>
+              </div>
+            </div>
+            <div class="contact">
+              <a class="btn" href="mailto:you@example.com">Email</a>
+              <a class="ghost" href="#contact">Message</a>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section id="about">
+        <div class="card">
+          <h2>About</h2>
+          <p class="lead">I’m a passionate motion graphic editor and visual storyteller. I create engaging animations, dynamic videos, and eye-catching visuals that bring ideas to life. I work with brands, creators, and businesses to craft content that captivates audiences and communicates messages effectively.Whether it’s animated intros, social media content, or full-scale video projects, I love turning concepts into motion.</p>
+        </div>
+      </section>
+
+      <section id="services">
+  <h2 style="margin-bottom:12px">Services</h2>
+  <div class="grid">
+    <div class="service card">
+      <h3>Motion Graphics</h3>
+      <p class="small">Animated videos, explainer clips, and dynamic visuals for social media and branding.</p>
+    </div>
+    <div class="service card">
+      <h3>Video Editing</h3>
+      <p class="small">Professional editing, transitions, color grading, and sound design for your projects.</p>
+    </div>
+    <div class="service card">
+      <h3>Visual Effects</h3>
+      <p class="small">Eye-catching VFX, compositing, and special effects to enhance your videos.</p>
+    </div>
+    <div class="service card">
+      <h3>Logo Animations</h3>
+      <p class="small">Creative animated logos and intros to make your brand stand out.</p>
+    </div>
+    <div class="service card">
+      <h3>Social Media Content</h3>
+      <p class="small">Short videos, reels, and animated posts optimized for Instagram, YouTube, and TikTok.</p>
+    </div>
+    <div class="service card">
+      <h3>Consulting & Storyboarding</h3>
+      <p class="small">Planning, concepting, and storyboarding your animations and video projects.</p>
+    </div>
+  </div>
+</section>
+
+
+      <section id="work">
+        <h2 style="margin-bottom:12px">Selected Work</h2>
+        <div class="portfolio-grid">
+          <div class="item">Project 1 — replace with image</div>
+          <div class="item">Project 2 — replace with image</div>
+          <div class="item">Project 3 — replace with image</div>
+          <div class="item">Project 4 — replace with image</div>
+          <div class="item">Project 5 — replace with image</div>
+          <div class="item">Project 6 — replace with image</div>
+        </div>
+      </section>
+
+      <section id="contact">
+        <h2 style="margin-bottom:12px">Contact</h2>
+        <div class="card">
+          <form onsubmit="handleContact(event)">
+            <label for="name">Your name</label>
+            <input id="name" required placeholder="e.g. Arsh Gamer" />
+
+            <label for="email">Email</label>
+            <input id="email" type="email" required placeholder="you@example.com" />
+
+            <label for="message">Message</label>
+            <textarea id="message" rows="5" required placeholder="Tell me about your project"></textarea>
+
+            <button class="btn" type="submit">Send message</button>
+          </form>
+        </div>
+      </section>
+
+    </main>
+
+    <footer>
+      <div class="small">© <span id="year"></span> Sibam Deep • Built with ❤️</div>
+      <div class="small">Follow: @_editz_hub_</div>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    function handleContact(e){
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
+
+      // Client-side fallback: open mail client with prefilled message
+      const subject = encodeURIComponent('Website contact from ' + name);
+      const body = encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\n\n' + message);
+      window.location.href = `mailto:you@example.com?subject=${subject}&body=${body}`;
+    }
+  </script>
+</body>
+</html>
